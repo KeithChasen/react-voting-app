@@ -3,12 +3,26 @@ import Product from './Product'
 import products from "./seed";
 
 class ProductList extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            products: []
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            products: products
+        })
+    }
+
     handleProductUpVote(productId) {
         console.log(productId)
     }
 
     render() {
-        const sortedProducts = products.sort((a, b) => (
+        const sortedProducts = this.state.products.sort((a, b) => (
             b.votes - a.votes
         ))
 
