@@ -4,7 +4,11 @@ import products from "./seed";
 
 class ProductList extends Component {
     render() {
-        const productList = products.map(product => (
+        const sortedProducts = products.sort((a, b) => (
+            b.votes - a.votes
+        ))
+
+        const productList = sortedProducts.map(product => (
                 <Product
                     key={product.id}
                     id={product.id}

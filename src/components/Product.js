@@ -12,7 +12,7 @@ class Product extends Component {
                         <a>
                             <i className="large caret up icon" />
                         </a>
-                        {/*{this.props.votes}*/}
+                        {this.props.votes}
                     </div>
                     <div className="description">
                         <a href={this.props.url}>

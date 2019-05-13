@@ -4,7 +4,7 @@ const products = [
         title: 'Yellow Pail',
         description: 'On-demand sand castle construction expertise',
         url: '#',
-        // votes: generateVoteCount(),
+        votes: 5,
         submittedAvatarUrl: './images/face.png',
         productImageUrl: './images/product.png'
     },
@@ -13,7 +13,7 @@ const products = [
         title: 'Green Pail',
         description: 'On-demand sand castle construction expertise',
         url: '#',
-        // votes: generateVoteCount(),
+        votes: 10,
         submittedAvatarUrl: './images/face.png',
         productImageUrl: './images/green-box.png'
     },
@@ -22,7 +22,7 @@ const products = [
         title: 'Red Pail',
         description: 'On-demand sand castle construction expertise',
         url: '#',
-        // votes: generateVoteCount(),
+        votes: 8,
         submittedAvatarUrl: './images/face.png',
         productImageUrl: './images/red-box.jpg'
     },
