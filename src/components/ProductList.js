@@ -18,7 +18,19 @@ class ProductList extends Component {
     }
 
     handleProductUpVote(productId) {
-        console.log(productId)
+        const updatedProducts = this.state.products.map(product => {
+            if (product.id === productId) {
+                return {
+                    ...product, votes: product.votes + 1
+                }
+            } else {
+                return product
+            }
+        })
+
+        this.setState({
+            products: updatedProducts
+        })
     }
 
     render() {
@@ -36,7 +48,7 @@ class ProductList extends Component {
                     votes={product.votes}
                     submittedAvatarUrl={product.submittedAvatarUrl}
                     productImageUrl={product.productImageUrl}
-                    onVote = {this.handleProductUpVote}
+                    onVote = {this.handleProductUpVote.bind(this)}
                 />
             )
         )
