@@ -3,12 +3,8 @@ import Product from './Product'
 import products from "./seed";
 
 class ProductList extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            products: []
-        }
+    state = {
+        products: []
     }
 
     componentDidMount() {
@@ -17,7 +13,7 @@ class ProductList extends Component {
         })
     }
 
-    handleProductUpVote(productId) {
+    handleProductUpVote = (productId) => {
         const updatedProducts = this.state.products.map(product => {
             if (product.id === productId) {
                 return {
